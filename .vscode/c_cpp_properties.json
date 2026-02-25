@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "name": "R",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Program Files/R/R-4.5.2/library/Rcpp/include",
+                "C:/rtools45/x86_64-w64-mingw32.static.posix/include",
+                "C:/MinGW/include"
+            ],
+            "compilerPath": "C:/MinGW/bin/g++.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-x64",
+            "compilerArgs": [
+                "-std=c++11"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**",
+                    "C:/Program Files/R/R-4.5.2/library/Rcpp/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 4
+}
