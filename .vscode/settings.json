@@ -1,5 +1,0 @@
-{
-    "C_Cpp.default.configurationProvider": "ms-vscode.cpptools",
-    "C_Cpp.intelliSenseEngine": "Tag Parser",
-    "C_Cpp.errorSquiggles": "Disabled"
-}
