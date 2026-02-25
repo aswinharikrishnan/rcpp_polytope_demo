@@ -1,0 +1,9 @@
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# R specific
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
