@@ -1,26 +1,21 @@
-#include <Rcpp.h>
-using namespace Rcpp;
+#include <RcppEigen.h>
+// [[Rcpp::depends(RcppEigen)]]
+
+using namespace Eigen;
 
 // [[Rcpp::export]]
-bool isInsidePolytope(NumericMatrix A, NumericVector b, NumericVector x)
+bool check_constraints_sparse(Eigen::MappedSparseMatrix<double> A, Eigen::VectorXd x, Eigen::VectorXd b)
 {
-  int n = A.nrow();
-  int m = A.ncol();
+  // 1. Efficient Sparse-Dense Multiplication: Ax
+  Eigen::VectorXd Ax = A * x;
 
-  for (int i = 0; i < n; i++)
+  // 2. Check if the point satisfies all linear inequalities (Ax <= b)
+  for (int i = 0; i < Ax.size(); ++i)
   {
-    double sum = 0;
-
-    for (int j = 0; j < m; j++)
-    {
-      sum += A(i, j) * x[j];
-    }
-
-    if (sum > b[i])
-    {
+    if (Ax[i] > b[i] + 1e-9)
+    { // Added a small epsilon for numerical stability
       return false;
     }
   }
-
   return true;
 }

@@ -1,0 +1,12 @@
+Package: rcppPolytopeDemo
+Type: Package
+Title: Sparse Polytope Demo for GSoC 2026
+Version: 0.1.0
+Author: Aswin Harikrishnan
+Maintainer: Aswin Harikrishnan <aswinhkk@gmail.com>
+Description: A proof-of-concept for sparse matrix representation in H-Polytopes.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports: Rcpp (>= 1.0.0), Matrix
+LinkingTo: Rcpp, RcppEigen
